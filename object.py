@@ -1,10 +1,11 @@
+from globals import *
 
 import libtcodpy as ltc
 import math
 import textwrap
 import shelve
 from fighter import Fighter
-import items 
+import items as i
 
 class Object:
     #this is a generic object: the player, a monster, an item, the stairs...
@@ -34,7 +35,7 @@ class Object:
             self.equipment.owner = self
  
             #there must be an Item component for the Equipment component to work properly
-            self.item = Item()
+            self.item = i.Item()
             self.item.owner = self
  
     def move(self, dx, dy):
@@ -68,7 +69,7 @@ class Object:
     def send_to_back(self):
         #make this object be drawn first, so all others appear above it if they're in the same tile.
         global objects
-        #objects.remove(self)
+#objects.remove(self)
         objects.insert(0, self)
  
     def draw(self):
