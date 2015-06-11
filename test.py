@@ -1,4 +1,3 @@
-# world
 import libtcodpy as ltc
 import math
 import textwrap
