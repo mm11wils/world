@@ -58,3 +58,13 @@ class Fighter:
         self.hp += amount
         if self.hp > self.max_hp:
             self.hp = self.max_hp
+            
+def player_death(player):
+	#the game ended!
+	global game_state
+	message('You died!', ltc.red)
+	game_state = 'dead'
+ 
+	#for added effect, transform the player into a corpse!
+	player.char = '%'
+	player.color = ltc.dark_red            
