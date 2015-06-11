@@ -54,3 +54,13 @@ color_dark_wall = ltc.Color(50, 50, 50)
 color_light_wall = ltc.Color(190, 190, 190)
 color_dark_ground = ltc.Color(35, 35, 35)
 color_light_ground = ltc.Color(140, 80, 25)
+
+fov_recompute = False
+
+objects = []
+
+ltc.console_set_custom_font('arial10x1023.png', ltc.FONT_TYPE_GREYSCALE | ltc.FONT_LAYOUT_TCOD)
+ltc.console_init_root(SCREEN_WIDTH, SCREEN_HEIGHT, 'python/ltc tutorial', False)
+ltc.sys_set_fps(LIMIT_FPS)
+con = ltc.console_new(MAP_WIDTH, MAP_HEIGHT)
+panel = ltc.console_new(SCREEN_WIDTH, PANEL_HEIGHT)
